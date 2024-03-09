@@ -1,4 +1,4 @@
-# ChatCSV-Streamlit-App
+# TechGPT-Streamlit-App
 An LLM powered ChatCSV Streamlit app so you can chat with your CSV files.
 
 <h1> How to run the app?</h1>
