@@ -1,53 +1,106 @@
-# TechGPT-Streamlit-App
-An LLM powered ChatCSV Streamlit app so you can chat with your CSV files.
 
-<h1> How to run the app?</h1>
-<p> OpenAI instantly revokes the API key once it detects that the key has been exposed publicly. So, that's the only thing to take care of.</p>
- 
- Generate your OpenAI API key here: <a href="https://platform.openai.com/account/api-keys"> Click Here </a>
-<br>
-<h2> Run locally </h2>
-<p> If you are running the app locally, then you can freely use the API key. <br>
-  in app.py, line 11: <br>
-  
-  ```
-  
-  openai_api_key = 's#-#####################jz'
-  
-  #can set the API key directly, if running locally.
-  
-  ```
- 
- Else if you want to keep the key private, store it in an environment variable named 'API_KEY' in your OS and then refer the key in app.py by:
- 
-  ```
-  from dotenv import load_dotenv
-  load_dotenv()
-  openai_api_key = os.getenv("OPENAI_API_KEY")
- 
-  ```
-  
- 
-  Henceforth make sure to have Streamlit installed in your system. Run the app by:
-  
-  ```
-  git clone https://github.com/AIAnytime/ChatCSV-Streamlit-App.git
-  cd ChatCSV-Streamlit-App
-  pip install -r requirements.txt
-  streamlit run app.py
-  
-  ```
- <h2> Run on Cloud </h2>
- 
- <p> You can also run this app locally on Streamlit Cloud, which is a free Cloud Hosting Service. 
- <br>
- Make a .env  file and store the key as 
- 
- ```
- OPENAI_API_KEY='##-###############'
- 
- ```
- There's already a .gitignore file with .env mentioned in it. If not, make one. <br>
- Remaining code remains the same.
+# 📊 TechGPT – Chat with Your CSV Data
 
-"# TechGPT" 
+**TechGPT** is a Streamlit-based web application that enables users to interactively explore and analyze CSV datasets using natural language queries. By uploading a CSV file, users can ask questions about their data, and TechGPT will provide immediate, insightful responses powered by OpenAI's GPT model.
+
+---
+
+## 🚀 Features
+
+- **Natural Language Interaction**: Query your data using everyday language without needing to write code.
+- **Instant Insights**: Receive immediate answers and summaries based on your dataset.
+- **User-Friendly Interface**: Simple and intuitive design for seamless user experience.
+- **Secure API Integration**: Easily integrate your OpenAI API key for personalized responses.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: [Streamlit](https://streamlit.io/)
+- **Backend**: Python
+- **AI Model**: OpenAI GPT (via API)
+- **Data Handling**: Pandas
+
+---
+
+## 📂 Installation & Setup
+
+1. **Clone the Repository**:
+   ```bash
+   git clone https://github.com/DANUSHMATHI2002/TechGPT.git
+   cd TechGPT
+   ```
+
+2. **Create a Virtual Environment** (optional but recommended):
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install Dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Set Up OpenAI API Key**:
+   - Obtain your API key from [OpenAI](https://platform.openai.com/account/api-keys).
+   - Create a `.env` file in the project root directory and add:
+     ```env
+     OPENAI_API_KEY=your_api_key_here
+     ```
+
+5. **Run the Application**:
+   ```bash
+   streamlit run app.py
+   ```
+
+6. **Access the App**:
+   - Navigate to `http://localhost:8501` in your web browser.
+
+---
+
+## 📸 Screenshots
+
+### 🖥️ Main Interface
+![GPT Screenshot 1](./gpt1.png)
+
+### 📁 Upload CSV File
+![GPT Screenshot 2](./gpt2.png)
+
+### 🤖 Ask Questions
+![GPT Screenshot 3](./gpt3.png)
+
+### 📊 Help centre
+![GPT Screenshot 4](./gpt4.png)
+
+---
+
+## 🤖 How It Works
+
+1. **Upload CSV**: Users upload a CSV file containing their dataset.
+2. **Ask Questions**: Users input natural language questions related to the data.
+3. **Get Answers**: The app processes the query using OpenAI's GPT model and returns relevant information or analysis.
+
+---
+
+## 📈 Example Use Cases
+
+- **Data Exploration**: Quickly understand the contents and structure of your dataset.
+- **Statistical Analysis**: Obtain summaries, averages, and other statistical insights.
+- **Data Cleaning**: Identify missing values or anomalies in the data.
+- **Custom Queries**: Ask specific questions tailored to your dataset's context.
+
+---
+
+## 🧾 License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## 🙋‍♂️ Author
+
+Developed by [Danushmathi P](https://github.com/DANUSHMATHI2002).  
+Feel free to connect on [LinkedIn](https://www.linkedin.com/in/danushmathip/).
+
+---
